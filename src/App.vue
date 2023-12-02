@@ -169,7 +169,7 @@ const items = [
     },
     // date: "28ᵗʰ NOV '21",
     // date: new Date("2021-11-28")
-    date: new Date("2021-28-04T12:00:00-06:30"),
+    date: new Date("2021-04-28T12:00:00-06:30"),
   },
   // {
   //   title: "courage the cowardly dog",
