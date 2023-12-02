@@ -1,58 +1,236 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="container">
+    <div v-for="item in items" :key="item.title">
+      <div class="card">
+        <div class="card-image-container">
+          <img class="card-image" :src="item.image" />
+        </div>
+        <div class="card-header">
+          <div class="card-title">{{ item.title }}</div>
+          <p>
+            {{ item.description }}
+          </p>
+        </div>
+        <div class="card-subtitle">
+          <span class="chip">{{ item.category }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="boo"></div>
+    <div class="boo"></div>
+    <div class="boo"></div>
+    <div class="boo"></div>
+    <div class="boo"></div>
+    <div class="boo"></div>
   </div>
+  <!-- <footer>
+    <p>&copy; 2023 Adil Faqah</p>
+  </footer> -->
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+<script setup>
+// var viaJs= require("../assets/6.jpeg") // eslint-disable-line no-undef
+var items = [
+  {
+    title: "vintage style cherry vanilla cake",
+    description:
+      "An 8-inch triple layer vanilla cake with cherry filling and Swiss Meringue Buttercream frosting!",
+    category: "baking",
+    image: require("../assets/0.png"),
+  },
+  {
+    title: "pug iron-on patch",
+    category: "embroidery",
+    image: require("../assets/1.png"),
+  },
+  {
+    title: "biscoff cheesecake",
+    category: "baking",
+    image: require("../assets/biscoff_cheesecake.png"),
+  },
+  {
+    title: "cartoon cake",
+    category: "baking",
+    image: require("../assets/cartoon_cake.jpeg"),
+  },
+  {
+    title: "ice cream in a waffle cone",
+    category: "miniature sculpting",
+    image: require("../assets/2.jpeg"),
+  },
+  {
+    title: "KFC fried chicken bucket",
+    category: "miniature sculpting",
+    image: require("../assets/3.png"),
+  },
+  {
+    title: "dulce de leche sandwich cookies",
+    category: "baking",
+    image: require("../assets/4.jpeg"),
+  },
+  {
+    title: "vintage style cake i",
+    category: "baking",
+    image: require("../assets/5.jpeg"),
+  },
+  {
+    title: "Chocolate Malt Cake",
+    category: "baking",
+    image: require("../assets/6.jpeg"),
+  },
+];
+// import { masonry } from "vue-masonry-css";
+// import Vue from 'vue'
+// Vue.use(VueMasonryPlugin)
+// export default {
+//   name: "HelloWorld",
+//   props: {
+//     msg: String,
+//   },
+// };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,500&display=swap");
+/* Generic styles */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--BG-COLOR);
 }
-ul {
-  list-style-type: none;
+
+body {
+  margin: 2rem 1.5rem;
   padding: 0;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.boo {
+  /* flex:1; */
+  flex-basis: 512px;
+  flex-shrink: 0;
 }
-a {
-  color: #42b983;
+
+.card {
+  background-color: var(--CARD-BG-COLOR);
+  /* flex: 1 1 512px; */
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  /* border: 1px solid #5f0f40; */
+  padding: 1.5rem;
+  /* margin: 0rem 1.5rem; */
+  border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+  max-width: 512px;
+  min-width: 300px;
+  box-shadow: rgba(64, 55, 67, 0.3) -4px 9px 25px -6px;
+}
+* {
+  box-sizing: border-box;
+}
+.card-image-container {
+  overflow: hidden;
+}
+
+.card-image {
+  border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+  width: 100%;
+}
+
+.card-title {
+  text-transform: capitalize;
+  font-family: "Fira Sans Condensed", sans-serif;
+  color: var(--CARD-TITLE-COLOR);
+  font-weight: 500;
+  /* font-style: italic; */
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.card-subtitle {
+  margin-top: -1rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: #3d405b;
+  /* opacity: 0.8; */
+  font-weight: 700;
+  align-self: flex-end;
+  /* opacity: 0.75; */
+  letter-spacing: 0.125ch;
+}
+
+.chip {
+  background-color: var(--CHIP-BG-COLOR);
+  /* border: 1px solid #5f0f40; */
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: var(--CHIP-FG-COLOR);
+}
+
+.card-title::after {
+  content: "";
+  padding-bottom: 1rem;
+  width: 3rem;
+  border-bottom: 6px solid var(--ACCENT-COLOR);
+  /* opacity: 0.25; */
+  display: block;
+}
+
+.card-header {
+  margin: 1rem;
+}
+
+.card-body {
+  padding: 1rem 1rem;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 2560px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+/* @media (max-width: 800px) {
+  .card-wrapper {
+    flex: 50%;
+    max-width: 50%;
+  }
+} */
+
+/* Responsive layout - makes the two card-wrappers stack on top of each other instead of next to each other */
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #272838;
+}
+
+/* footer */
+footer {
+  background-color: #333;
+  padding: 0.75rem;
+  color: white;
+  text-align: center;
+  font-size: 0.75rem;
 }
 </style>
