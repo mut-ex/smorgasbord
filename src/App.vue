@@ -18,11 +18,19 @@
       </button>
       <button
         class="chip"
+        :class="{ filter_active: show === 'painting' }"
+        @click="setShow('painting')"
+      >
+        painting
+      </button>
+      <button
+        class="chip"
         :class="{ filter_active: show === 'embroidery' }"
         @click="setShow('embroidery')"
       >
         embroidery
       </button>
+
       <button
         class="chip"
         :class="{ filter_active: show === 'miniature sculpting' }"
@@ -51,7 +59,7 @@
               </p>
             </div>
             <div class="card-footer">
-              <span class="card-date">{{ item.date }}</span>
+              <span class="card-date">{{ format_date(item.date) }}</span>
               <div class="chip">{{ item.category }}</div>
             </div>
           </div>
@@ -79,21 +87,78 @@ function setShow(new_val) {
 
 const filtered_items = computed({
   get() {
-    return items.filter(
-      (item) => show.value === item.category || show.value === "all"
-    );
+    return items
+      .filter((item) => show.value === item.category || show.value === "all")
+      .sort(compare_date);
   },
 });
+
+function format_date(date) {
+  const months = [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAY",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OCT",
+    "NOV",
+    "DEC",
+  ];
+  return (
+    months[date.getMonth()] +
+    " " +
+    date.getDate() +
+    ", " +
+    (date.getYear() + 1900)
+  );
+}
+
+function compare_date(a, b) {
+  return a.date - b.date;
+  // if (a.date < b.date) {
+  //   return -1;
+  // } else if (b.date > a.date) {
+  //   return 1;
+  // }
+  // // a must be equal to b
+  // return 0;
+}
 
 const items = [
   {
     title: "hogwarts crest",
     category: "embroidery",
     image: {
-      thumbnail: require("./assets/hogwarts_crest_thumbnail.png"),
+      thumbnail: require("./assets/hogwarts_crest_thumb.png"),
       source: require("./assets/hogwarts_crest.png"),
     },
-    date: "9ᵗʰ FEB '22",
+    date: new Date("2022-03-08T12:00:00-06:30"),
+  },
+  {
+    title: "still life I (oil on canvas)",
+    category: "painting",
+    image: {
+      thumbnail: require("./assets/stilllife_apples_thumb.png"),
+      source: require("./assets/stilllife_apples.png"),
+    },
+    // date: "28ᵗʰ NOV '21",
+    // date: new Date("2021-11-28")
+    date: new Date("2021-11-28T12:00:00-06:30"),
+  },
+  {
+    title: "biscoff cheesecake",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/biscoff_cheesecake_thumb.png"),
+      source: require("./assets/biscoff_cheesecake.png"),
+    },
+    // date: "28ᵗʰ NOV '21",
+    // date: new Date("2021-11-28")
+    date: new Date("2023-09-01T12:00:00-06:30"),
   },
   // {
   //   title: "courage the cowardly dog",
