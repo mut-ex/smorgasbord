@@ -160,6 +160,17 @@ const items = [
     // date: new Date("2021-11-28")
     date: new Date("2023-09-01T12:00:00-06:30"),
   },
+  {
+    title: "soft pretzel",
+    category: "miniature sculpting",
+    image: {
+      thumbnail: require("./assets/soft_pretzel_thumb.png"),
+      source: require("./assets/soft_pretzel.png"),
+    },
+    // date: "28ᵗʰ NOV '21",
+    // date: new Date("2021-11-28")
+    date: new Date("2021-28-04T12:00:00-06:30"),
+  },
   // {
   //   title: "courage the cowardly dog",
   //   category: "embroidery",
