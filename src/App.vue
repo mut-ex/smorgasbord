@@ -2,39 +2,90 @@
   <main>
     <img class="logo" src="./assets/logo2.svg" />
     <div class="filter-group">
-      <button class="filter-chip" @click="set_cat('all')">all</button>
-      <button class="filter-chip" @click="set_cat('baking')">baking</button>
-      <button class="filter-chip" @click="set_cat('embroidery')">
+      <button
+        class="chip"
+        :class="{ filter_active: show === 'all' }"
+        @click="setShow('all')"
+      >
+        all
+      </button>
+      <button
+        class="chip"
+        :class="{ filter_active: show === 'baking' }"
+        @click="setShow('baking')"
+      >
+        baking
+      </button>
+      <button
+        class="chip"
+        :class="{ filter_active: show === 'embroidery' }"
+        @click="setShow('embroidery')"
+      >
         embroidery
       </button>
-      <button class="filter-chip" @click="set_cat('miniature sculpting')">miniature sculpting</button>
-    </div>
-    <div class="container">
-      <PostCard
-        v-for="item in items"
-        :key="item.title"
-        :item="item"
-        :active_category="active_category"
+      <button
+        class="chip"
+        :class="{ filter_active: show === 'miniature sculpting' }"
+        @click="setShow('miniature sculpting')"
       >
-      </PostCard>
-      <div class="boo"></div>
-      <div class="boo"></div>
-      <div class="boo"></div>
-      <div class="boo"></div>
-      <div class="boo"></div>
-      <div class="boo"></div>
+        miniature sculpting
+      </button>
+    </div>
+    <div class="cards">
+      <TransitionGroup name="list">
+        <div v-for="item in filtered_items" :key="item.title">
+          <div class="card">
+            <div class="card-image-container" v-viewer :backdrop="false">
+              <!-- <img class="card-image" :src="item.image" :alt="item.title"/> -->
+              <img class="card-image" v-lazy="item.image" :alt="item.title" />
+            </div>
+            <div class="card-header">
+              <div class="card-title">{{ item.title }}</div>
+              <p>
+                {{ item.description }}
+              </p>
+            </div>
+            <div class="card-footer">
+              <span class="card-date">25th December 2024</span>
+              <div class="chip">{{ item.category }}</div>
+            </div>
+          </div>
+        </div>
+      </TransitionGroup>
+      <!-- <div class="ghost-card"></div>
+      <div class="ghost-card"></div>
+      <div class="ghost-card"></div>
+      <div class="ghost-card"></div>
+      <div class="ghost-card"></div>
+      <div class="ghost-card"></div> -->
     </div>
   </main>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import PostCard from "./components/PostCard.vue";
-var active_category = ref("all");
-function set_cat(new_val) {
-  active_category.value = new_val;
+import { ref, computed } from "vue";
+
+var show = ref("all");
+
+function setShow(new_val) {
+  show.value = "none";
+  setTimeout(() => (show.value = new_val), 1);
 }
+
+const filtered_items = computed({
+  get() {
+    return items.filter(
+      (item) => show.value === item.category || show.value === "all"
+    );
+  },
+});
+
 const items = [
+  {
+    title: "courage the cowardly dog",
+    category: "embroidery",
+    image: require("./assets/courage.png"),
+  },
   {
     title: "vintage style cherry vanilla cake",
     description:
@@ -86,100 +137,9 @@ const items = [
 </script>
 
 <style>
-.filter-chip {
-  align-self: flex-end;
-  background-color: var(--CHIP-BG-COLOR);
-  border-radius: 4px;
-  color: #3d405b;
-  color: var(--CHIP-FG-COLOR);
-  font-family: "Lato", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.125ch;
-  line-height: 1.5rem;
-  margin: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  text-transform: uppercase;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-
-.filter-group {
-  display: flex;
-flex-wrap: wrap;
-  /* border: 1px solid red; */
-  /* margin: 1rem; */
-  margin-bottom: 1rem;
-}
-.boo {
-  /* flex:1; */
-  flex-basis: 512px;
-  flex-shrink: 0;
-}
-.container {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 2560px;
-}
-
-.header-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  /* flex-basis: 512px; */
-  /* margin-top: 1rem; */
-  /* margin-bottom: 2rem; */
-  margin-bottom: 2%;
-  max-width: 512px;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  /* width: 256px; */
-}
-
-:root {
-  --BG-COLOR: #564592;
-  --CARD-BG-COLOR: #fbfef9;
-  --CARD-TITLE-COLOR: #564592;
-  --ACCENT-COLOR: #edf67d;
-  --CHIP-BG-COLOR: #f896d8;
-  --CHIP-FG-COLOR: #fbfef9;
-}
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,900&display=swap");
-
-header {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #e5ddcb;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  /* border: 1px solid black; */
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* max-width: 70%; */
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  /* font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
+.viewer-backdrop {
+  transition: all 0.2s !important;
+  /* background-color: rgba(0, 0, 0, 0.6) !important; */
+  backdrop-filter: blur(8px) grayscale(50%);
 }
 </style>
