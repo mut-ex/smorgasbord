@@ -164,8 +164,8 @@ const items = [
     title: "soft pretzel",
     category: "miniature sculpting",
     image: {
-      thumbnail: require("./assets/soft_pretzel_thumb.png"),
-      source: require("./assets/soft_pretzel.png"),
+      thumbnail: require("./assets/pretzel_thumb.png"),
+      source: require("./assets/pretzel.png"),
     },
     // date: "28ᵗʰ NOV '21",
     // date: new Date("2021-11-28")
