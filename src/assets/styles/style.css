@@ -141,6 +141,7 @@ button.chip {
 
 .card-image-container {
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card-image[lazy="loading"] {

@@ -46,7 +46,7 @@
               </p>
             </div>
             <div class="card-footer">
-              <span class="card-date">25th December 2024</span>
+              <span class="card-date">{{ item.date }}</span>
               <div class="chip">{{ item.category }}</div>
             </div>
           </div>
@@ -82,6 +82,12 @@ const filtered_items = computed({
 
 const items = [
   {
+    title: "hogwarts crest",
+    category: "embroidery",
+    image: require("./assets/hogwarts_crest.png"),
+    date: "9ᵗʰ FEB '22"
+  },
+  {
     title: "courage the cowardly dog",
     category: "embroidery",
     image: require("./assets/courage.png"),
@@ -93,11 +99,7 @@ const items = [
     category: "baking",
     image: require("./assets/0.png"),
   },
-  {
-    title: "pug iron-on patch",
-    category: "embroidery",
-    image: require("./assets/1.png"),
-  },
+
   {
     title: "biscoff cheesecake",
     category: "baking",
@@ -112,6 +114,11 @@ const items = [
     title: "ice cream in a waffle cone",
     category: "miniature sculpting",
     image: require("./assets/2.jpeg"),
+  },
+  {
+    title: "pug iron-on patch",
+    category: "embroidery",
+    image: require("./assets/1.png"),
   },
   {
     title: "KFC fried chicken bucket",
