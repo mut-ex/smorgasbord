@@ -37,7 +37,12 @@
           <div class="card">
             <div class="card-image-container" v-viewer :backdrop="false">
               <!-- <img class="card-image" :src="item.image" :alt="item.title"/> -->
-              <img class="card-image" v-lazy="item.image" :alt="item.title" />
+              <img
+                class="card-image"
+                :src="item.image.thumbnail"
+                :data-src="item.image.source"
+                :alt="item.title"
+              />
             </div>
             <div class="card-header">
               <div class="card-title">{{ item.title }}</div>
@@ -84,62 +89,65 @@ const items = [
   {
     title: "hogwarts crest",
     category: "embroidery",
-    image: require("./assets/hogwarts_crest.png"),
-    date: "9ᵗʰ FEB '22"
+    image: {
+      thumbnail: require("./assets/hogwarts_crest_thumbnail.png"),
+      source: require("./assets/hogwarts_crest.png"),
+    },
+    date: "9ᵗʰ FEB '22",
   },
-  {
-    title: "courage the cowardly dog",
-    category: "embroidery",
-    image: require("./assets/courage.png"),
-  },
-  {
-    title: "vintage style cherry vanilla cake",
-    description:
-      "An 8-inch triple layer vanilla cake with cherry filling and Swiss Meringue Buttercream frosting!",
-    category: "baking",
-    image: require("./assets/0.png"),
-  },
+  // {
+  //   title: "courage the cowardly dog",
+  //   category: "embroidery",
+  //   image: require("./assets/courage.png"),
+  // },
+  // {
+  //   title: "vintage style cherry vanilla cake",
+  //   description:
+  //     "An 8-inch triple layer vanilla cake with cherry filling and Swiss Meringue Buttercream frosting!",
+  //   category: "baking",
+  //   image: require("./assets/0.png"),
+  // },
 
-  {
-    title: "biscoff cheesecake",
-    category: "baking",
-    image: require("./assets/biscoff_cheesecake.png"),
-  },
-  {
-    title: "cartoon cake",
-    category: "baking",
-    image: require("./assets/cartoon_cake.jpeg"),
-  },
-  {
-    title: "ice cream in a waffle cone",
-    category: "miniature sculpting",
-    image: require("./assets/2.jpeg"),
-  },
-  {
-    title: "pug iron-on patch",
-    category: "embroidery",
-    image: require("./assets/1.png"),
-  },
-  {
-    title: "KFC fried chicken bucket",
-    category: "miniature sculpting",
-    image: require("./assets/3.png"),
-  },
-  {
-    title: "dulce de leche sandwich cookies",
-    category: "baking",
-    image: require("./assets/4.jpeg"),
-  },
-  {
-    title: "vintage style cake i",
-    category: "baking",
-    image: require("./assets/5.jpeg"),
-  },
-  {
-    title: "Chocolate Malt Cake",
-    category: "baking",
-    image: require("./assets/6.jpeg"),
-  },
+  // {
+  //   title: "biscoff cheesecake",
+  //   category: "baking",
+  //   image: require("./assets/biscoff_cheesecake.png"),
+  // },
+  // {
+  //   title: "cartoon cake",
+  //   category: "baking",
+  //   image: require("./assets/cartoon_cake.jpeg"),
+  // },
+  // {
+  //   title: "ice cream in a waffle cone",
+  //   category: "miniature sculpting",
+  //   image: require("./assets/2.jpeg"),
+  // },
+  // {
+  //   title: "pug iron-on patch",
+  //   category: "embroidery",
+  //   image: require("./assets/1.png"),
+  // },
+  // {
+  //   title: "KFC fried chicken bucket",
+  //   category: "miniature sculpting",
+  //   image: require("./assets/3.png"),
+  // },
+  // {
+  //   title: "dulce de leche sandwich cookies",
+  //   category: "baking",
+  //   image: require("./assets/4.jpeg"),
+  // },
+  // {
+  //   title: "vintage style cake i",
+  //   category: "baking",
+  //   image: require("./assets/5.jpeg"),
+  // },
+  // {
+  //   title: "Chocolate Malt Cake",
+  //   category: "baking",
+  //   image: require("./assets/6.jpeg"),
+  // },
 ];
 </script>
 

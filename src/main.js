@@ -18,6 +18,7 @@ app.use(VueViewer, {
     toolbar: false,
     navbar: false,
     title: false,
+    url: 'data-src',
   },
 });
 
