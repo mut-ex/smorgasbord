@@ -1,8 +1,21 @@
 <template>
   <main>
     <img class="logo" src="./assets/logo2.svg" />
+    <div class="filter-group">
+      <button class="filter-chip" @click="set_cat('all')">all</button>
+      <button class="filter-chip" @click="set_cat('baking')">baking</button>
+      <button class="filter-chip" @click="set_cat('embroidery')">
+        embroidery
+      </button>
+      <button class="filter-chip" @click="set_cat('miniature sculpting')">miniature sculpting</button>
+    </div>
     <div class="container">
-      <PostCard v-for="item in items" :key="item.title" :item="item">
+      <PostCard
+        v-for="item in items"
+        :key="item.title"
+        :item="item"
+        :active_category="active_category"
+      >
       </PostCard>
       <div class="boo"></div>
       <div class="boo"></div>
@@ -15,8 +28,12 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import PostCard from "./components/PostCard.vue";
-
+var active_category = ref("all");
+function set_cat(new_val) {
+  active_category.value = new_val;
+}
 const items = [
   {
     title: "vintage style cherry vanilla cake",
@@ -69,6 +86,30 @@ const items = [
 </script>
 
 <style>
+.filter-chip {
+  align-self: flex-end;
+  background-color: var(--CHIP-BG-COLOR);
+  border-radius: 4px;
+  color: #3d405b;
+  color: var(--CHIP-FG-COLOR);
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.125ch;
+  line-height: 1.5rem;
+  margin: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.filter-group {
+  display: flex;
+flex-wrap: wrap;
+  /* border: 1px solid red; */
+  /* margin: 1rem; */
+  margin-bottom: 1rem;
+}
 .boo {
   /* flex:1; */
   flex-basis: 512px;

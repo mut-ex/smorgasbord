@@ -1,5 +1,5 @@
 <template>
-    <div class="dummy">
+    <div v-if="active_category === item.category || active_category === 'all'" class="dummy">
 
         <div class="card">
         <div class="card-image-container">
@@ -22,6 +22,7 @@
 // eslint-disable-next-line
 const props = defineProps({
   item: Object,
+  active_category: String
 });
 // import { masonry } from "vue-masonry-css";
 // import Vue from 'vue'
@@ -65,6 +66,7 @@ body {
   flex-basis: 512px;
   flex-shrink: 0;
 }
+
 
 .card {
   background-color: var(--CARD-BG-COLOR);
