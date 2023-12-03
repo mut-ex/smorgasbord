@@ -38,6 +38,13 @@
       >
         miniature sculpting
       </button>
+      <button
+        class="chip"
+        :class="{ filter_active: show === 'colored pencil' }"
+        @click="setShow('colored pencil')"
+      >
+        colored pencil
+      </button>
     </div>
     <div class="cards">
       <TransitionGroup name="list">
@@ -131,6 +138,15 @@ function compare_date(a, b) {
 }
 //dulcedeleche_cookies_thumb
 const items = [
+{
+    title: "Escape",
+    category: "colored pencil",
+    image: {
+      thumbnail: require("./assets/sunset_thumb.webp"),
+      source: require("./assets/sunset.jpg"),
+    },
+    date: new Date("2021-08-01T12:00:00-06:30"),
+  },
   {
     title: "Vintage Cherry Cake",
     category: "baking",
