@@ -115,51 +115,56 @@ const items = [
     },
     date: new Date("2021-04-28T12:00:00-06:30"),
   },
-  // {
-  //   title: "monkey's fist keyring",
-  //   category: "paracord",
-  //   image: {
-  //     thumbnail: require("./assets/monkey_fist_thumb.webp"),
-  //     source: require("./assets/monkey_fist.jpg"),
-  //   },
-  //   date: new Date("2021-04-20T12:00:00-06:30"),
-  // },
-  // {
-  //   title: "an escape",
-  //   category: "colored pencil",
-  //   image: {
-  //     thumbnail: require("./assets/sunset_thumb.webp"),
-  //     source: require("./assets/sunset.jpg"),
-  //   },
-  //   date: new Date("2021-08-01T12:00:00-06:30"),
-  // },
-  // {
-  //   title: "vintage cherry cake",
-  //   category: "baking",
-  //   image: {
-  //     thumbnail: require("./assets/vintage_cherry_thumb.webp"),
-  //     source: require("./assets/vintage_cherry.jpg"),
-  //   },
-  //   date: new Date("2023-11-24T12:00:00-06:30"),
-  // },
-  // {
-  //   title: "rosette cake",
-  //   category: "baking",
-  //   image: {
-  //     thumbnail: require("./assets/rosette_cake_thumb.webp"),
-  //     source: require("./assets/rosette_cake.jpg"),
-  //   },
-  //   date: new Date("2023-06-07T12:00:00-06:30"),
-  // },
-  // {
-  //   title: "dulce de leche cookies",
-  //   category: "baking",
-  //   image: {
-  //     thumbnail: require("./assets/dulcedeleche_cookies_thumb.webp"),
-  //     source: require("./assets/dulcedeleche_cookies.jpg"),
-  //   },
-  //   date: new Date("2023-06-10T12:00:00-06:30"),
-  // },
+  {
+    title: "monkey's fist keyring",
+    category: "paracord",
+    image: {
+      thumbnail: require("./assets/monkey_fist_thumb.webp"),
+      source: require("./assets/monkey_fist.jpg"),
+      aspect_ratio: "1 / 1",
+    },
+    date: new Date("2021-04-20T12:00:00-06:30"),
+  },
+  {
+    title: "an escape",
+    category: "colored pencil",
+    image: {
+      thumbnail: require("./assets/sunset_thumb.webp"),
+      source: require("./assets/sunset.jpg"),
+      aspect_ratio: "4 / 5",
+    },
+    date: new Date("2021-08-01T12:00:00-06:30"),
+  },
+  {
+    title: "vintage cherry cake",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/vintage_cherry_thumb.webp"),
+      source: require("./assets/vintage_cherry.jpg"),
+      aspect_ratio: "4 / 5",
+    },
+    date: new Date("2023-11-24T12:00:00-06:30"),
+  },
+  {
+    title: "rosette cake",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/rosette_cake_thumb.webp"),
+      source: require("./assets/rosette_cake.jpg"),
+      aspect_ratio: "4 / 3",
+    },
+    date: new Date("2023-06-07T12:00:00-06:30"),
+  },
+  {
+    title: "dulce de leche cookies",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/dulcedeleche_cookies_thumb.webp"),
+      source: require("./assets/dulcedeleche_cookies.jpg"),
+      aspect_ratio: "3 / 2",
+    },
+    date: new Date("2023-06-10T12:00:00-06:30"),
+  },
   {
     title: "courage the cowardly dog",
     category: "embroidery",
@@ -170,42 +175,56 @@ const items = [
     },
     date: new Date("2022-01-16T12:00:00-06:30"),
   },
-  // {
-  //   title: "hogwarts crest",
-  //   category: "embroidery",
-  //   image: {
-  //     thumbnail: require("./assets/hogwarts_crest_thumb.webp"),
-  //     source: require("./assets/hogwarts_crest.jpg"),
-  //   },
-  //   date: new Date("2022-03-08T12:00:00-06:30"),
-  // },
-  // {
-  //   title: "still life I (oil on canvas)",
-  //   category: "painting",
-  //   image: {
-  //     thumbnail: require("./assets/stilllife_apples_thumb.webp"),
-  //     source: require("./assets/stilllife_apples.jpg"),
-  //   },
-  //   date: new Date("2021-11-28T12:00:00-06:30"),
-  // },
-  // {
-  //   title: "biscoff cheesecake",
-  //   category: "baking",
-  //   image: {
-  //     thumbnail: require("./assets/biscoff_cheesecake_thumb.webp"),
-  //     source: require("./assets/biscoff_cheesecake.jpg"),
-  //   },
-  //   date: new Date("2023-09-01T12:00:00-06:30"),
-  // },
-  // {
-  //   title: "molasses spice cookies",
-  //   category: "baking",
-  //   image: {
-  //     thumbnail: require("./assets/molasses_spice_cookies_thumb.webp"),
-  //     source: require("./assets/molasses_spice_cookies.jpg"),
-  //   },
-  //   date: new Date("2023-08-07T12:00:00-06:30"),
-  // },
+  {
+    title: "hogwarts crest",
+    category: "embroidery",
+    image: {
+      thumbnail: require("./assets/hogwarts_crest_thumb.webp"),
+      source: require("./assets/hogwarts_crest.jpg"),
+      aspect_ratio: "1 / 1",
+    },
+    date: new Date("2022-03-08T12:00:00-06:30"),
+  },
+  {
+    title: "still life I (oil on canvas)",
+    category: "painting",
+    image: {
+      thumbnail: require("./assets/stilllife_apples_thumb.webp"),
+      source: require("./assets/stilllife_apples.jpg"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2021-11-28T12:00:00-06:30"),
+  },
+  {
+    title: "biscoff cheesecake",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/biscoff_cheesecake_thumb.webp"),
+      source: require("./assets/biscoff_cheesecake.jpg"),
+      aspect_ratio: "1 / 1",
+    },
+    date: new Date("2023-09-01T12:00:00-06:30"),
+  },
+  {
+    title: "molasses spice cookies",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/molasses_spice_cookies_thumb.webp"),
+      source: require("./assets/molasses_spice_cookies.jpg"),
+      aspect_ratio: "4 / 5",
+    },
+    date: new Date("2023-08-07T12:00:00-06:30"),
+  },
+  {
+    title: "saguaros in the desert (oil on canvas)",
+    category: "painting",
+    image: {
+      thumbnail: require("./assets/saguaros_thumb.webp"),
+      source: require("./assets/saguaros.jpg"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2021-12-01T12:00:00-06:30"),
+  },
 ];
 </script>
 

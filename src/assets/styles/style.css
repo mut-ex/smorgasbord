@@ -108,9 +108,11 @@ button.chip {
 
 .logo {
   margin-bottom: 2%;
-  max-width: 512px;
+  max-width: 95vw;
+  /* max-width: 512px; */
   padding-left: 3rem;
   padding-right: 3rem;
+  aspect-ratio: 2/1;
 }
 
 .ghost-card {
