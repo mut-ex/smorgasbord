@@ -118,7 +118,9 @@ function format_date(date) {
 }
 
 function compare_date(a, b) {
-  return a.date - b.date;
+  // return a.date - b.date;
+  return b.date - a.date;
+
   // if (a.date < b.date) {
   //   return -1;
   // } else if (b.date > a.date) {
@@ -127,14 +129,32 @@ function compare_date(a, b) {
   // // a must be equal to b
   // return 0;
 }
-
+//dulcedeleche_cookies_thumb
 const items = [
+  {
+    title: "dulce de leche cookies",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/dulcedeleche_cookies_thumb.webp"),
+      source: require("./assets/dulcedeleche_cookies.jpg"),
+    },
+    date: new Date("2023-06-10T12:00:00-06:30"),
+  },
+  {
+    title: "courage the cowardly dog",
+    category: "embroidery",
+    image: {
+      thumbnail: require("./assets/courage_thumb.webp"),
+      source: require("./assets/courage.jpg"),
+    },
+    date: new Date("2022-01-16T12:00:00-06:30"),
+  },
   {
     title: "hogwarts crest",
     category: "embroidery",
     image: {
-      thumbnail: require("./assets/hogwarts_crest_thumb.png"),
-      source: require("./assets/hogwarts_crest.png"),
+      thumbnail: require("./assets/hogwarts_crest_thumb.webp"),
+      source: require("./assets/hogwarts_crest.jpg"),
     },
     date: new Date("2022-03-08T12:00:00-06:30"),
   },
@@ -142,11 +162,9 @@ const items = [
     title: "still life I (oil on canvas)",
     category: "painting",
     image: {
-      thumbnail: require("./assets/stilllife_apples_thumb.png"),
-      source: require("./assets/stilllife_apples.png"),
+      thumbnail: require("./assets/stilllife_apples_thumb.webp"),
+      source: require("./assets/stilllife_apples.jpg"),
     },
-    // date: "28ᵗʰ NOV '21",
-    // date: new Date("2021-11-28")
     date: new Date("2021-11-28T12:00:00-06:30"),
   },
   {
@@ -156,21 +174,28 @@ const items = [
       thumbnail: require("./assets/biscoff_cheesecake_thumb.png"),
       source: require("./assets/biscoff_cheesecake.png"),
     },
-    // date: "28ᵗʰ NOV '21",
-    // date: new Date("2021-11-28")
     date: new Date("2023-09-01T12:00:00-06:30"),
   },
   {
-    title: "soft pretzel",
-    category: "miniature sculpting",
+    title: "molasses spice cookies",
+    category: "baking",
     image: {
-      thumbnail: require("./assets/pretzel_thumb.png"),
-      source: require("./assets/pretzel.png"),
+      thumbnail: require("./assets/molasses_spice_cookies_thumb.webp"),
+      source: require("./assets/molasses_spice_cookies.jpg"),
     },
-    // date: "28ᵗʰ NOV '21",
-    // date: new Date("2021-11-28")
-    date: new Date("2021-04-28T12:00:00-06:30"),
+    date: new Date("2023-08-07T12:00:00-06:30"),
   },
+  // {
+  //   title: "soft pretzel",
+  //   category: "miniature sculpting",
+  //   image: {
+  //     thumbnail: require("./assets/pretzel_thumb.png"),
+  //     source: require("./assets/pretzel.png"),
+  //   },
+  //   // date: "28ᵗʰ NOV '21",
+  //   // date: new Date("2021-11-28")
+  //   date: new Date("2021-04-28T12:00:00-06:30"),
+  // },
   // {
   //   title: "courage the cowardly dog",
   //   category: "embroidery",
