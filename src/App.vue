@@ -18,13 +18,6 @@
       </button>
       <button
         class="chip"
-        :class="{ filter_active: show === 'painting' }"
-        @click="setShow('painting')"
-      >
-        painting
-      </button>
-      <button
-        class="chip"
         :class="{ filter_active: show === 'embroidery' }"
         @click="setShow('embroidery')"
       >
@@ -38,6 +31,21 @@
       >
         miniature sculpting
       </button>
+      <button
+        class="chip"
+        :class="{ filter_active: show === 'paracord' }"
+        @click="setShow('paracord')"
+      >
+        paracord
+      </button>
+      <button
+        class="chip"
+        :class="{ filter_active: show === 'painting' }"
+        @click="setShow('painting')"
+      >
+        painting
+      </button>
+
       <button
         class="chip"
         :class="{ filter_active: show === 'colored pencil' }"
@@ -126,8 +134,8 @@ function format_date(date) {
 
 function compare_date(a, b) {
   // return a.date - b.date;
-  return b.date - a.date;
-
+  // return b.date - a.date;
+  return Math.random() - 0.5;
   // if (a.date < b.date) {
   //   return -1;
   // } else if (b.date > a.date) {
@@ -138,7 +146,16 @@ function compare_date(a, b) {
 }
 //dulcedeleche_cookies_thumb
 const items = [
-{
+  {
+    title: "Monkey's Fist Keyring",
+    category: "paracord",
+    image: {
+      thumbnail: require("./assets/monkey_fist_thumb.webp"),
+      source: require("./assets/monkey_fist.jpg"),
+    },
+    date: new Date("2021-04-20T12:00:00-06:30"),
+  },
+  {
     title: "Escape",
     category: "colored pencil",
     image: {
