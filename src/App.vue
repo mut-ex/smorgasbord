@@ -15,15 +15,19 @@
         baking
       </button>
       <button class="chip"
+              :class="{ filter_active: show === 'colored pencil' }"
+              @click="setShow('colored pencil')">
+        colored pencil
+      </button>
+      <button class="chip"
               :class="{ filter_active: show === 'embroidery' }"
               @click="setShow('embroidery')">
         embroidery
       </button>
-
       <button class="chip"
-              :class="{ filter_active: show === 'sculpting' }"
-              @click="setShow('sculpting')">
-        sculpting
+              :class="{ filter_active: show === 'painting' }"
+              @click="setShow('painting')">
+        painting
       </button>
       <button class="chip"
               :class="{ filter_active: show === 'paracord' }"
@@ -31,15 +35,14 @@
         paracord
       </button>
       <button class="chip"
-              :class="{ filter_active: show === 'painting' }"
-              @click="setShow('painting')">
-        painting
+              :class="{ filter_active: show === 'sculpting' }"
+              @click="setShow('sculpting')">
+        sculpting
       </button>
-
       <button class="chip"
-              :class="{ filter_active: show === 'colored pencil' }"
-              @click="setShow('colored pencil')">
-        colored pencil
+              :class="{ filter_active: show === 'wire wrapping' }"
+              @click="setShow('wire wrapping')">
+        wire wrapping
       </button>
     </div>
     <div class="cards">
@@ -96,7 +99,27 @@ function compare_date(a, b) {
 
 const items = [
   {
-    title: "pizza slice",
+    title: "ring with polymer clay stone",
+    category: "wire wrapping",
+    image: {
+      thumbnail: require("./assets/ring_thumb.webp"),
+      source: require("./assets/ring.jpg"),
+      aspect_ratio: "3 / 2",
+    },
+    date: new Date("2021-11-03T12:00:00-06:30"),
+  },
+  {
+    title: "hotdog bun",
+    category: "sculpting",
+    image: {
+      thumbnail: require("./assets/hotdogbun_thumb.webp"),
+      source: require("./assets/hotdogbun.jpg"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2021-10-19T12:00:00-06:30"),
+  },
+  {
+    title: "slice of pepperoni pizza (acrylic on canvas)",
     category: "painting",
     image: {
       thumbnail: require("./assets/pizza_thumb.webp"),
