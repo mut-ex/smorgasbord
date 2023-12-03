@@ -132,6 +132,24 @@ function compare_date(a, b) {
 //dulcedeleche_cookies_thumb
 const items = [
   {
+    title: "Vintage Cherry Cake",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/vintage_cherry_thumb.webp"),
+      source: require("./assets/vintage_cherry.jpg"),
+    },
+    date: new Date("2023-11-24T12:00:00-06:30"),
+  },
+  {
+    title: "Rosette Cake",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/rosette_cake_thumb.webp"),
+      source: require("./assets/rosette_cake.jpg"),
+    },
+    date: new Date("2023-06-07T12:00:00-06:30"),
+  },
+  {
     title: "dulce de leche cookies",
     category: "baking",
     image: {
@@ -171,8 +189,8 @@ const items = [
     title: "biscoff cheesecake",
     category: "baking",
     image: {
-      thumbnail: require("./assets/biscoff_cheesecake_thumb.png"),
-      source: require("./assets/biscoff_cheesecake.png"),
+      thumbnail: require("./assets/biscoff_cheesecake_thumb.webp"),
+      source: require("./assets/biscoff_cheesecake.jpg"),
     },
     date: new Date("2023-09-01T12:00:00-06:30"),
   },
