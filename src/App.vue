@@ -146,6 +146,15 @@ function compare_date(a, b) {
 }
 //dulcedeleche_cookies_thumb
 const items = [
+{
+    title: "pizza slice",
+    category: "sculpting",
+    image: {
+      thumbnail: require("./assets/pizza_thumb.webp"),
+      source: require("./assets/pizza.jpg"),
+    },
+    date: new Date("2021-09-21T12:00:00-06:30"),
+  },
   {
     title: "ice cream in a waffle cone",
     category: "sculpting",
