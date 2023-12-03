@@ -148,7 +148,7 @@ function compare_date(a, b) {
 const items = [
 {
     title: "pizza slice",
-    category: "sculpting",
+    category: "painting",
     image: {
       thumbnail: require("./assets/pizza_thumb.webp"),
       source: require("./assets/pizza.jpg"),
