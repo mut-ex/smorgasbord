@@ -26,10 +26,10 @@
 
       <button
         class="chip"
-        :class="{ filter_active: show === 'miniature sculpting' }"
-        @click="setShow('miniature sculpting')"
+        :class="{ filter_active: show === 'sculpting' }"
+        @click="setShow('sculpting')"
       >
-        miniature sculpting
+        sculpting
       </button>
       <button
         class="chip"
@@ -147,7 +147,16 @@ function compare_date(a, b) {
 //dulcedeleche_cookies_thumb
 const items = [
   {
-    title: "Monkey's Fist Keyring",
+    title: "ice cream in a waffle cone",
+    category: "sculpting",
+    image: {
+      thumbnail: require("./assets/icecream_thumb.webp"),
+      source: require("./assets/icecream.jpg"),
+    },
+    date: new Date("2021-04-28T12:00:00-06:30"),
+  },
+  {
+    title: "monkey's fist keyring",
     category: "paracord",
     image: {
       thumbnail: require("./assets/monkey_fist_thumb.webp"),
@@ -156,7 +165,7 @@ const items = [
     date: new Date("2021-04-20T12:00:00-06:30"),
   },
   {
-    title: "Escape",
+    title: "an escape",
     category: "colored pencil",
     image: {
       thumbnail: require("./assets/sunset_thumb.webp"),
@@ -165,7 +174,7 @@ const items = [
     date: new Date("2021-08-01T12:00:00-06:30"),
   },
   {
-    title: "Vintage Cherry Cake",
+    title: "vintage cherry cake",
     category: "baking",
     image: {
       thumbnail: require("./assets/vintage_cherry_thumb.webp"),
@@ -174,7 +183,7 @@ const items = [
     date: new Date("2023-11-24T12:00:00-06:30"),
   },
   {
-    title: "Rosette Cake",
+    title: "rosette cake",
     category: "baking",
     image: {
       thumbnail: require("./assets/rosette_cake_thumb.webp"),
@@ -236,70 +245,6 @@ const items = [
     },
     date: new Date("2023-08-07T12:00:00-06:30"),
   },
-  // {
-  //   title: "soft pretzel",
-  //   category: "miniature sculpting",
-  //   image: {
-  //     thumbnail: require("./assets/pretzel_thumb.png"),
-  //     source: require("./assets/pretzel.png"),
-  //   },
-  //   // date: "28ᵗʰ NOV '21",
-  //   // date: new Date("2021-11-28")
-  //   date: new Date("2021-04-28T12:00:00-06:30"),
-  // },
-  // {
-  //   title: "courage the cowardly dog",
-  //   category: "embroidery",
-  //   image: require("./assets/courage.png"),
-  // },
-  // {
-  //   title: "vintage style cherry vanilla cake",
-  //   description:
-  //     "An 8-inch triple layer vanilla cake with cherry filling and Swiss Meringue Buttercream frosting!",
-  //   category: "baking",
-  //   image: require("./assets/0.png"),
-  // },
-
-  // {
-  //   title: "biscoff cheesecake",
-  //   category: "baking",
-  //   image: require("./assets/biscoff_cheesecake.png"),
-  // },
-  // {
-  //   title: "cartoon cake",
-  //   category: "baking",
-  //   image: require("./assets/cartoon_cake.jpeg"),
-  // },
-  // {
-  //   title: "ice cream in a waffle cone",
-  //   category: "miniature sculpting",
-  //   image: require("./assets/2.jpeg"),
-  // },
-  // {
-  //   title: "pug iron-on patch",
-  //   category: "embroidery",
-  //   image: require("./assets/1.png"),
-  // },
-  // {
-  //   title: "KFC fried chicken bucket",
-  //   category: "miniature sculpting",
-  //   image: require("./assets/3.png"),
-  // },
-  // {
-  //   title: "dulce de leche sandwich cookies",
-  //   category: "baking",
-  //   image: require("./assets/4.jpeg"),
-  // },
-  // {
-  //   title: "vintage style cake i",
-  //   category: "baking",
-  //   image: require("./assets/5.jpeg"),
-  // },
-  // {
-  //   title: "Chocolate Malt Cake",
-  //   category: "baking",
-  //   image: require("./assets/6.jpeg"),
-  // },
 ];
 </script>
 
