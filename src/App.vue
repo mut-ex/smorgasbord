@@ -98,7 +98,7 @@ function compare_date(a, b) {
 }
 
 const items = [
-{
+  {
     title: "KFC Fried Chicken Bucket",
     category: "sculpting",
     image: {
@@ -108,15 +108,15 @@ const items = [
     },
     date: new Date("2021-05-01T12:00:00-06:30"),
   },
-{
-    title: "gyro wrap",
-    category: "sculpting",
+  {
+    title: "biscoff cheesecake",
+    category: "baking",
     image: {
-      thumbnail: require("./assets/gyro_thumb.webp"),
-      source: require("./assets/gyro.jpg"),
-      aspect_ratio: "3 / 2",
+      thumbnail: require("./assets/biscoff_cheesecake_thumb.webp"),
+      source: require("./assets/biscoff_cheesecake.jpg"),
+      aspect_ratio: "1 / 1",
     },
-    date: new Date("2021-05-05T12:00:00-06:30"),
+    date: new Date("2023-09-01T12:00:00-06:30"),
   },
   {
     title: "soap bubble",
@@ -159,6 +159,26 @@ const items = [
     date: new Date("2021-09-21T12:00:00-06:30"),
   },
   {
+    title: "rosette cake",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/rosette_cake_thumb.webp"),
+      source: require("./assets/rosette_cake.jpg"),
+      aspect_ratio: "4 / 3",
+    },
+    date: new Date("2023-06-07T12:00:00-06:30"),
+  },
+  {
+    title: "dulce de leche cookies",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/dulcedeleche_cookies_thumb.webp"),
+      source: require("./assets/dulcedeleche_cookies.jpg"),
+      aspect_ratio: "3 / 2",
+    },
+    date: new Date("2023-06-10T12:00:00-06:30"),
+  },
+  {
     title: "ice cream in a waffle cone",
     category: "sculpting",
     image: {
@@ -189,6 +209,16 @@ const items = [
     date: new Date("2021-08-01T12:00:00-06:30"),
   },
   {
+    title: "gyro wrap",
+    category: "sculpting",
+    image: {
+      thumbnail: require("./assets/gyro_thumb.webp"),
+      source: require("./assets/gyro.jpg"),
+      aspect_ratio: "3 / 2",
+    },
+    date: new Date("2021-05-05T12:00:00-06:30"),
+  },
+  {
     title: "vintage cherry cake",
     category: "baking",
     image: {
@@ -198,26 +228,7 @@ const items = [
     },
     date: new Date("2023-11-24T12:00:00-06:30"),
   },
-  {
-    title: "rosette cake",
-    category: "baking",
-    image: {
-      thumbnail: require("./assets/rosette_cake_thumb.webp"),
-      source: require("./assets/rosette_cake.jpg"),
-      aspect_ratio: "4 / 3",
-    },
-    date: new Date("2023-06-07T12:00:00-06:30"),
-  },
-  {
-    title: "dulce de leche cookies",
-    category: "baking",
-    image: {
-      thumbnail: require("./assets/dulcedeleche_cookies_thumb.webp"),
-      source: require("./assets/dulcedeleche_cookies.jpg"),
-      aspect_ratio: "3 / 2",
-    },
-    date: new Date("2023-06-10T12:00:00-06:30"),
-  },
+
   {
     title: "courage the cowardly dog",
     category: "embroidery",
@@ -248,16 +259,7 @@ const items = [
     },
     date: new Date("2021-11-28T12:00:00-06:30"),
   },
-  {
-    title: "biscoff cheesecake",
-    category: "baking",
-    image: {
-      thumbnail: require("./assets/biscoff_cheesecake_thumb.webp"),
-      source: require("./assets/biscoff_cheesecake.jpg"),
-      aspect_ratio: "1 / 1",
-    },
-    date: new Date("2023-09-01T12:00:00-06:30"),
-  },
+
   {
     title: "molasses spice cookies",
     category: "baking",
