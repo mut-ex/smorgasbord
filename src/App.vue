@@ -98,6 +98,36 @@ function compare_date(a, b) {
 }
 
 const items = [
+{
+    title: "KFC Fried Chicken Bucket",
+    category: "sculpting",
+    image: {
+      thumbnail: require("./assets/kfc_thumb.webp"),
+      source: require("./assets/kfc.jpg"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2021-05-01T12:00:00-06:30"),
+  },
+{
+    title: "gyro wrap",
+    category: "sculpting",
+    image: {
+      thumbnail: require("./assets/gyro_thumb.webp"),
+      source: require("./assets/gyro.jpg"),
+      aspect_ratio: "3 / 2",
+    },
+    date: new Date("2021-05-05T12:00:00-06:30"),
+  },
+  {
+    title: "soap bubble",
+    category: "colored pencil",
+    image: {
+      thumbnail: require("./assets/bubble_thumb.webp"),
+      source: require("./assets/bubble.jpg"),
+      aspect_ratio: "3 / 2",
+    },
+    date: new Date("2021-04-19T12:00:00-06:30"),
+  },
   {
     title: "ring with polymer clay stone",
     category: "wire wrapping",
