@@ -98,6 +98,16 @@ function compare_date(a, b) {
 }
 
 const items = [
+{
+    title: "Linzer Cookies",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/linzer_thumb.webp"),
+      source: require("./assets/linzer.jpg"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2023-12-08T12:00:00-06:30"),
+  },
   {
     title: "KFC Fried Chicken Bucket",
     category: "sculpting",
