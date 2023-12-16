@@ -99,6 +99,76 @@ function compare_date(a, b) {
 
 const items = [
 {
+    title: "3D Hand Lettering",
+    category: "painting",
+    image: {
+      thumbnail: require("./assets/adil_thumb.webp"),
+      source: require("./assets/adil.jpg"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2021-11-01T12:00:00-06:30"),
+  },
+  {
+    title: "Conquistador Watchband",
+    category: "paracord",
+    image: {
+      thumbnail: require("./assets/conquistadorwatch_thumb.webp"),
+      source: require("./assets/conquistadorwatch.jpg"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2021-05-11T12:00:00-06:30"),
+  },
+  {
+    title: "Chocolate Malt Cake",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/chocolatemalt_thumb.webp"),
+      source: require("./assets/chocolatemalt.jpg"),
+      aspect_ratio: "1 / 1",
+    },
+    date: new Date("2022-07-08T12:00:00-06:30"),
+  },
+  {
+    title: "Pug Iron-On Patch",
+    category: "embroidery",
+    image: {
+      thumbnail: require("./assets/pugpatch_thumb.webp"),
+      source: require("./assets/pugpatch.jpg"),
+      aspect_ratio: "1 / 1",
+    },
+    date: new Date("2022-08-01T12:00:00-06:30"),
+  },
+  {
+    title: "Chocolate Chewies",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/chewie_thumb.webp"),
+      source: require("./assets/chewie.jpg"),
+      aspect_ratio: "4 / 5",
+    },
+    date: new Date("2023-12-10T12:00:00-06:30"),
+  },
+  {
+    title: "S'more Blossom Cookies",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/smore_thumb.webp"),
+      source: require("./assets/smore.jpg"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2023-12-11T12:00:00-06:30"),
+  },
+  {
+    title: "Coconut Snowman Cookies",
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/snowman_thumb.webp"),
+      source: require("./assets/snowman.jpg"),
+      aspect_ratio: "4 / 5",
+    },
+    date: new Date("2023-12-10T12:00:00-06:30"),
+  },
+  {
     title: "Linzer Cookies",
     category: "baking",
     image: {
