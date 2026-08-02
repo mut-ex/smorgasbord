@@ -3,7 +3,8 @@ import { ref, computed } from "vue";
 import { items } from "./items.ts";
 import ItemCard from "./components/ItemCard.vue";
 
-const categories: Category[] = ["3d printing", "baking", "calligraphy & lettering", "electronics & programming", "digital art", "drawing", "jewelry & pins", "painting", "paracord", "printmaking", "sculpting", "sewing & embroidery"]
+const categories: Category[] = ["3d printing", "baking", "calligraphy & lettering", "electronics & programming", "drawing", "jewelry & pins", "painting", "paracord", "printmaking", "sculpting", "sewing & embroidery"]
+// missing: "digital art"
 
 const categoryRef = ref<Category>("all");
 
