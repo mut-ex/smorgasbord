@@ -1,0 +1,246 @@
+const thumbs = import.meta.glob<string>("./assets/thumbs/*.webp", {
+  eager: true,
+  import: "default",
+});
+
+const sources = import.meta.glob<string>("./assets/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+  import: "default",
+});
+
+export const img = (name: string, aspect_ratio: string): ItemImage => ({
+  thumbnail: thumbs[`./assets/thumbs/${name}.webp`]!,
+  source: sources[`./assets/${name}.png`]!,
+  aspect_ratio,
+});
+
+export const items: Item[] = [
+  {
+    title: "boo!",
+    category: "sculpting",
+    image: img("boo", "1 / 1"),
+    date: new Date("2024-10-31"),
+  },
+  {
+    title: "brown butter chocolate chunk blondies",
+    category: "baking",
+    image: img("blondies", "4 / 5"),
+    date: new Date("2024-10-06"),
+  },
+  {
+    title: "cake slices",
+    category: "sculpting",
+    image: img("cake_slices", "1 / 1"),
+    date: new Date("2024-10-06"),
+  },
+  {
+    title: "ice cream truck",
+    category: "sculpting",
+    image: img("icecream_truck", "1 / 1"),
+    date: new Date("2024-10-06"),
+  },
+  {
+    title: "Pug Plushie",
+    category: "sewing & embroidery",
+    image: img("pug_plushie", "1 / 1"),
+    date: new Date("2024-05-09"),
+  },
+  {
+    title: "Cartoon Cake Slice",
+    category: "baking",
+    image: img("cartoon_cake", "1 / 1"),
+    date: new Date("2023-11-26"),
+  },
+  {
+    title: "Hank",
+    category: "drawing",
+    image: img("hank_1", "2567 / 1712"),
+    date: new Date("2023-03-11"),
+  },
+  {
+    title: "Flying Saucer",
+    category: "sculpting",
+    image: img("flying_saucer", "4 / 5"),
+    date: new Date("2023-03-20"),
+  },
+  {
+    title: "Macarons",
+    category: "baking",
+    image: img("macarons", "3 / 2"),
+    date: new Date("2023-03-20"),
+  },
+  {
+    title: "Ice Cream (Acrylic)",
+    category: "painting",
+    image: img("icecream_painting", "4 / 5"),
+    date: new Date("2021-09-29"),
+  },
+  {
+    title: "Rooster (Gouache)",
+    category: "painting",
+    image: img("rooster", "5 / 7"),
+    date: new Date("2021-08-11"),
+  },
+  {
+    title: 'Pâte Sablée "Cake" With Chantilly Mascarpone',
+    category: "baking",
+    image: img("63", "5 / 4"),
+    date: new Date("2023-08-29"),
+  },
+  {
+    title: "3D Hand Lettering",
+    category: "calligraphy & lettering",
+    image: img("adil", "5 / 4"),
+    date: new Date("2021-11-01"),
+  },
+  {
+    title: "Conquistador Watchband",
+    category: "paracord",
+    image: img("conquistadorwatch", "5 / 4"),
+    date: new Date("2021-05-11"),
+  },
+  {
+    title: "Chocolate Malt Cake",
+    category: "baking",
+    image: img("chocolatemalt", "1 / 1"),
+    date: new Date("2022-07-08"),
+  },
+  {
+    title: "pug patch",
+    category: "sewing & embroidery",
+    image: img("pugpatch", "1 / 1"),
+    date: new Date("2022-08-01"),
+  },
+  {
+    title: "chocolate chewies",
+    category: "baking",
+    image: img("chewie", "4 / 5"),
+    date: new Date("2023-12-10"),
+  },
+  {
+    title: "S'more Blossom Cookies",
+    category: "baking",
+    image: img("smore", "5 / 4"),
+    date: new Date("2023-12-11"),
+  },
+  {
+    title: "Coconut Snowman Cookies",
+    category: "baking",
+    image: img("snowman", "4 / 5"),
+    date: new Date("2023-12-10"),
+  },
+  {
+    title: "Linzer Cookies",
+    category: "baking",
+    image: img("linzer", "5 / 4"),
+    date: new Date("2023-12-08"),
+  },
+  {
+    title: "KFC Fried Chicken Bucket",
+    category: "sculpting",
+    image: img("kfc", "5 / 4"),
+    date: new Date("2021-05-01"),
+  },
+  {
+    title: "biscoff cheesecake",
+    category: "baking",
+    image: img("biscoff_cheesecake", "1 / 1"),
+    date: new Date("2023-09-01"),
+  },
+  {
+    title: "soap bubble",
+    category: "drawing",
+    image: img("bubble", "3 / 2"),
+    date: new Date("2021-04-19"),
+  },
+  {
+    title: "ring with polymer clay stone",
+    category: "jewelry & pins",
+    image: img("ring", "3 / 2"),
+    date: new Date("2021-11-03"),
+  },
+  {
+    title: "hotdog bun",
+    category: "sculpting",
+    image: img("hotdogbun", "5 / 4"),
+    date: new Date("2021-10-19"),
+  },
+  {
+    title: "slice of pepperoni pizza (acrylic)",
+    category: "painting",
+    image: img("pizza", "1 / 1"),
+    date: new Date("2021-09-21"),
+  },
+  {
+    title: "Cake I",
+    category: "baking",
+    image: img("rosette_cake", "4 / 3"),
+    date: new Date("2023-06-07"),
+  },
+  {
+    title: "dulce de leche cookies",
+    category: "baking",
+    image: img("dulcedeleche_cookies", "3 / 2"),
+    date: new Date("2023-06-10"),
+  },
+  {
+    title: "ice cream in a waffle cone",
+    category: "sculpting",
+    image: img("icecream", "4 / 5"),
+    date: new Date("2021-04-28"),
+  },
+  {
+    title: "monkey's fist keyring",
+    category: "paracord",
+    image: img("monkey_fist", "1 / 1"),
+    date: new Date("2021-04-20"),
+  },
+  {
+    title: "an escape",
+    category: "drawing",
+    image: img("sunset", "4 / 5"),
+    date: new Date("2021-08-01"),
+  },
+  {
+    title: "gyro wrap",
+    category: "sculpting",
+    image: img("gyro", "3 / 2"),
+    date: new Date("2021-05-05"),
+  },
+  {
+    title: "Cake II",
+    category: "baking",
+    image: img("vintage_cherry", "4 / 5"),
+    date: new Date("2023-11-24"),
+  },
+  {
+    title: "courage the cowardly dog",
+    category: "sewing & embroidery",
+    image: img("courage", "4 / 5"),
+    date: new Date("2022-01-16"),
+  },
+  {
+    title: "hogwarts crest patch",
+    category: "sewing & embroidery",
+    image: img("hogwarts_crest", "1 / 1"),
+    date: new Date("2022-03-08"),
+  },
+  {
+    title: "still life I (oil)",
+    category: "painting",
+    image: img("stilllife_apples", "5 / 4"),
+    date: new Date("2021-11-28"),
+  },
+  {
+    title: "molasses spice cookies",
+    category: "baking",
+    image: img("molasses_spice_cookies", "4 / 5"),
+    date: new Date("2023-08-07"),
+  },
+  {
+    title: "saguaros in the desert (oil)",
+    category: "painting",
+    image: img("saguaros", "5 / 4"),
+    date: new Date("2021-12-01"),
+  },
+];
