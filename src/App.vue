@@ -99,6 +99,16 @@ function compare_date(a, b) {
 
 const items = [
 {
+    title: 'Pâte Sablée "Cake" With Chantilly Mascarpone',
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/63_thumb.webp"),
+      source: require("./assets/63.png"),
+      aspect_ratio: "5 / 4",
+    },
+    date: new Date("2023-08-29T12:00:00-06:30"),
+  },
+{
     title: "3D Hand Lettering",
     category: "painting",
     image: {
