@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-image-container" v-viewer :backdrop="false">
       <img class="card-image" :style="{ 'aspect-ratio': item.image.aspect_ratio }" :src="item.image.thumbnail"
-        :data-src="item.image.source" :alt="item.title" />
+        :data-src="item.image.source" :alt="item.title" loading="lazy" />
     </div>
     <div class="card-header">
       <div class="card-title">{{ item.title }}</div>
