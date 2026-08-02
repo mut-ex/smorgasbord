@@ -1,7 +1,6 @@
 <template>
   <main>
     <img class="logo" src="./assets/logo.svg" alt="adil's smörgåsbord" />
-    <div><p>Tip: You can tap any image to open it in full-resolution.</p></div>
     <div class="filter-group">
       <button class="chip" :class="{ filter_active: show === 'all' }" @click="setShow('all')">
         all ({{ items.length }})
