@@ -98,21 +98,41 @@ function compare_date(a, b) {
 }
 
 const items = [
+    {
+    title: 'Ice Cream (Acrylic)',
+    category: "painting",
+    image: {
+      thumbnail: require("./assets/thumbs/icecream_painting.webp"),
+      source: require("./assets/icecream_painting.png"),
+      aspect_ratio: "4 / 5",
+    },
+    date: new Date("2021-09-29T12:00:00-06:30"),
+  },
+  {
+    title: 'Rooster (Gouache)',
+    category: "painting",
+    image: {
+      thumbnail: require("./assets/thumbs/rooster.webp"),
+      source: require("./assets/rooster.png"),
+      aspect_ratio: "5 / 7",
+    },
+    date: new Date("2021-08-11T12:00:00-06:30"),
+  },
 {
     title: 'Pâte Sablée "Cake" With Chantilly Mascarpone',
     category: "baking",
     image: {
-      thumbnail: require("./assets/63_thumb.webp"),
+      thumbnail: require("./assets/thumbs/63.webp"),
       source: require("./assets/63.png"),
       aspect_ratio: "5 / 4",
     },
     date: new Date("2023-08-29T12:00:00-06:30"),
   },
 {
-    title: "3D Hand Lettering",
+    title: "3D Hand Lettering (Acrylic)",
     category: "painting",
     image: {
-      thumbnail: require("./assets/adil_thumb.webp"),
+      thumbnail: require("./assets/thumbs/adil.webp"),
       source: require("./assets/adil.jpg"),
       aspect_ratio: "5 / 4",
     },
@@ -122,7 +142,7 @@ const items = [
     title: "Conquistador Watchband",
     category: "paracord",
     image: {
-      thumbnail: require("./assets/conquistadorwatch_thumb.webp"),
+      thumbnail: require("./assets/thumbs/conquistadorwatch.webp"),
       source: require("./assets/conquistadorwatch.jpg"),
       aspect_ratio: "5 / 4",
     },
@@ -132,7 +152,7 @@ const items = [
     title: "Chocolate Malt Cake",
     category: "baking",
     image: {
-      thumbnail: require("./assets/chocolatemalt_thumb.webp"),
+      thumbnail: require("./assets/thumbs/chocolatemalt.webp"),
       source: require("./assets/chocolatemalt.jpg"),
       aspect_ratio: "1 / 1",
     },
@@ -142,7 +162,7 @@ const items = [
     title: "Pug Iron-On Patch",
     category: "embroidery",
     image: {
-      thumbnail: require("./assets/pugpatch_thumb.webp"),
+      thumbnail: require("./assets/thumbs/pugpatch.webp"),
       source: require("./assets/pugpatch.jpg"),
       aspect_ratio: "1 / 1",
     },
@@ -152,7 +172,7 @@ const items = [
     title: "Chocolate Chewies",
     category: "baking",
     image: {
-      thumbnail: require("./assets/chewie_thumb.webp"),
+      thumbnail: require("./assets/thumbs/chewie.webp"),
       source: require("./assets/chewie.jpg"),
       aspect_ratio: "4 / 5",
     },
@@ -162,7 +182,7 @@ const items = [
     title: "S'more Blossom Cookies",
     category: "baking",
     image: {
-      thumbnail: require("./assets/smore_thumb.webp"),
+      thumbnail: require("./assets/thumbs/smore.webp"),
       source: require("./assets/smore.jpg"),
       aspect_ratio: "5 / 4",
     },
@@ -172,7 +192,7 @@ const items = [
     title: "Coconut Snowman Cookies",
     category: "baking",
     image: {
-      thumbnail: require("./assets/snowman_thumb.webp"),
+      thumbnail: require("./assets/thumbs/snowman.webp"),
       source: require("./assets/snowman.jpg"),
       aspect_ratio: "4 / 5",
     },
@@ -182,7 +202,7 @@ const items = [
     title: "Linzer Cookies",
     category: "baking",
     image: {
-      thumbnail: require("./assets/linzer_thumb.webp"),
+      thumbnail: require("./assets/thumbs/linzer.webp"),
       source: require("./assets/linzer.jpg"),
       aspect_ratio: "5 / 4",
     },
@@ -192,7 +212,7 @@ const items = [
     title: "KFC Fried Chicken Bucket",
     category: "sculpting",
     image: {
-      thumbnail: require("./assets/kfc_thumb.webp"),
+      thumbnail: require("./assets/thumbs/kfc.webp"),
       source: require("./assets/kfc.jpg"),
       aspect_ratio: "5 / 4",
     },
@@ -202,7 +222,7 @@ const items = [
     title: "biscoff cheesecake",
     category: "baking",
     image: {
-      thumbnail: require("./assets/biscoff_cheesecake_thumb.webp"),
+      thumbnail: require("./assets/thumbs/biscoff_cheesecake.webp"),
       source: require("./assets/biscoff_cheesecake.jpg"),
       aspect_ratio: "1 / 1",
     },
@@ -212,7 +232,7 @@ const items = [
     title: "soap bubble",
     category: "colored pencil",
     image: {
-      thumbnail: require("./assets/bubble_thumb.webp"),
+      thumbnail: require("./assets/thumbs/bubble.webp"),
       source: require("./assets/bubble.jpg"),
       aspect_ratio: "3 / 2",
     },
@@ -222,7 +242,7 @@ const items = [
     title: "ring with polymer clay stone",
     category: "wire wrapping",
     image: {
-      thumbnail: require("./assets/ring_thumb.webp"),
+      thumbnail: require("./assets/thumbs/ring.webp"),
       source: require("./assets/ring.jpg"),
       aspect_ratio: "3 / 2",
     },
@@ -232,17 +252,17 @@ const items = [
     title: "hotdog bun",
     category: "sculpting",
     image: {
-      thumbnail: require("./assets/hotdogbun_thumb.webp"),
+      thumbnail: require("./assets/thumbs/hotdogbun.webp"),
       source: require("./assets/hotdogbun.jpg"),
       aspect_ratio: "5 / 4",
     },
     date: new Date("2021-10-19T12:00:00-06:30"),
   },
   {
-    title: "slice of pepperoni pizza (acrylic on canvas)",
+    title: "slice of pepperoni pizza (acrylic)",
     category: "painting",
     image: {
-      thumbnail: require("./assets/pizza_thumb.webp"),
+      thumbnail: require("./assets/thumbs/pizza.webp"),
       source: require("./assets/pizza.jpg"),
       aspect_ratio: "1 / 1",
     },
@@ -252,7 +272,7 @@ const items = [
     title: "rosette cake",
     category: "baking",
     image: {
-      thumbnail: require("./assets/rosette_cake_thumb.webp"),
+      thumbnail: require("./assets/thumbs/rosette_cake.webp"),
       source: require("./assets/rosette_cake.jpg"),
       aspect_ratio: "4 / 3",
     },
@@ -262,7 +282,7 @@ const items = [
     title: "dulce de leche cookies",
     category: "baking",
     image: {
-      thumbnail: require("./assets/dulcedeleche_cookies_thumb.webp"),
+      thumbnail: require("./assets/thumbs/dulcedeleche_cookies.webp"),
       source: require("./assets/dulcedeleche_cookies.jpg"),
       aspect_ratio: "3 / 2",
     },
@@ -272,7 +292,7 @@ const items = [
     title: "ice cream in a waffle cone",
     category: "sculpting",
     image: {
-      thumbnail: require("./assets/icecream_thumb.webp"),
+      thumbnail: require("./assets/thumbs/icecream.webp"),
       source: require("./assets/icecream.jpg"),
       aspect_ratio: "3 / 2",
     },
@@ -282,7 +302,7 @@ const items = [
     title: "monkey's fist keyring",
     category: "paracord",
     image: {
-      thumbnail: require("./assets/monkey_fist_thumb.webp"),
+      thumbnail: require("./assets/thumbs/monkey_fist.webp"),
       source: require("./assets/monkey_fist.jpg"),
       aspect_ratio: "1 / 1",
     },
@@ -292,7 +312,7 @@ const items = [
     title: "an escape",
     category: "colored pencil",
     image: {
-      thumbnail: require("./assets/sunset_thumb.webp"),
+      thumbnail: require("./assets/thumbs/sunset.webp"),
       source: require("./assets/sunset.jpg"),
       aspect_ratio: "4 / 5",
     },
@@ -302,7 +322,7 @@ const items = [
     title: "gyro wrap",
     category: "sculpting",
     image: {
-      thumbnail: require("./assets/gyro_thumb.webp"),
+      thumbnail: require("./assets/thumbs/gyro.webp"),
       source: require("./assets/gyro.jpg"),
       aspect_ratio: "3 / 2",
     },
@@ -312,7 +332,7 @@ const items = [
     title: "vintage cherry cake",
     category: "baking",
     image: {
-      thumbnail: require("./assets/vintage_cherry_thumb.webp"),
+      thumbnail: require("./assets/thumbs/vintage_cherry.webp"),
       source: require("./assets/vintage_cherry.jpg"),
       aspect_ratio: "4 / 5",
     },
@@ -323,7 +343,7 @@ const items = [
     title: "courage the cowardly dog",
     category: "embroidery",
     image: {
-      thumbnail: require("./assets/courage_thumb.webp"),
+      thumbnail: require("./assets/thumbs/courage.webp"),
       source: require("./assets/courage.jpg"),
       aspect_ratio: "4 / 5",
     },
@@ -333,17 +353,17 @@ const items = [
     title: "hogwarts crest",
     category: "embroidery",
     image: {
-      thumbnail: require("./assets/hogwarts_crest_thumb.webp"),
+      thumbnail: require("./assets/thumbs/hogwarts_crest.webp"),
       source: require("./assets/hogwarts_crest.jpg"),
       aspect_ratio: "1 / 1",
     },
     date: new Date("2022-03-08T12:00:00-06:30"),
   },
   {
-    title: "still life I (oil on canvas)",
+    title: "still life I (oil)",
     category: "painting",
     image: {
-      thumbnail: require("./assets/stilllife_apples_thumb.webp"),
+      thumbnail: require("./assets/thumbs/stilllife_apples.webp"),
       source: require("./assets/stilllife_apples.jpg"),
       aspect_ratio: "5 / 4",
     },
@@ -354,17 +374,17 @@ const items = [
     title: "molasses spice cookies",
     category: "baking",
     image: {
-      thumbnail: require("./assets/molasses_spice_cookies_thumb.webp"),
+      thumbnail: require("./assets/thumbs/molasses_spice_cookies.webp"),
       source: require("./assets/molasses_spice_cookies.jpg"),
       aspect_ratio: "4 / 5",
     },
     date: new Date("2023-08-07T12:00:00-06:30"),
   },
   {
-    title: "saguaros in the desert (oil on canvas)",
+    title: "saguaros in the desert (oil)",
     category: "painting",
     image: {
-      thumbnail: require("./assets/saguaros_thumb.webp"),
+      thumbnail: require("./assets/thumbs/saguaros.webp"),
       source: require("./assets/saguaros.jpg"),
       aspect_ratio: "5 / 4",
     },
