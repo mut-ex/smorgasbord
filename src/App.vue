@@ -1,54 +1,35 @@
 <template>
   <main>
-    <img class="logo"
-         src="./assets/logo.svg"
-         alt="adil's smörgåsbord" />
+    <img class="logo" src="./assets/logo.svg" alt="adil's smörgåsbord" />
     <div class="filter-group">
-      <button class="chip"
-              :class="{ filter_active: show === 'all' }"
-              @click="setShow('all')">
-        all
+      <button class="chip" :class="{ filter_active: show === 'all' }" @click="setShow('all')">
+        all ({{ items.length }})
       </button>
-      <button class="chip"
-              :class="{ filter_active: show === 'baking' }"
-              @click="setShow('baking')">
-        baking
+      <button class="chip" :class="{ filter_active: show === 'baking' }" @click="setShow('baking')">
+        baking ({{items.filter((item) => item.category === "baking").length}})
       </button>
-      <button class="chip"
-              :class="{ filter_active: show === 'colored pencil' }"
-              @click="setShow('colored pencil')">
-        colored pencil
+      <button class="chip" :class="{ filter_active: show === 'colored pencil' }" @click="setShow('colored pencil')">
+        colored pencil ({{items.filter((item) => item.category === "colored pencil").length}})
       </button>
-      <button class="chip"
-              :class="{ filter_active: show === 'embroidery' }"
-              @click="setShow('embroidery')">
-        embroidery
+      <button class="chip" :class="{ filter_active: show === 'sewing & embroidery' }" @click="setShow('sewing & embroidery')">
+        sewing & embroidery ({{items.filter((item) => item.category === "sewing & embroidery").length}})
       </button>
-      <button class="chip"
-              :class="{ filter_active: show === 'painting' }"
-              @click="setShow('painting')">
-        painting
+      <button class="chip" :class="{ filter_active: show === 'painting' }" @click="setShow('painting')">
+        painting ({{items.filter((item) => item.category === "painting").length}})
       </button>
-      <button class="chip"
-              :class="{ filter_active: show === 'paracord' }"
-              @click="setShow('paracord')">
-        paracord
+      <button class="chip" :class="{ filter_active: show === 'paracord' }" @click="setShow('paracord')">
+        paracord ({{items.filter((item) => item.category === "paracord").length}})
       </button>
-      <button class="chip"
-              :class="{ filter_active: show === 'sculpting' }"
-              @click="setShow('sculpting')">
-        sculpting
+      <button class="chip" :class="{ filter_active: show === 'sculpting' }" @click="setShow('sculpting')">
+        sculpting ({{items.filter((item) => item.category === "sculpting").length}})
       </button>
-      <button class="chip"
-              :class="{ filter_active: show === 'wire wrapping' }"
-              @click="setShow('wire wrapping')">
-        wire wrapping
+      <button class="chip" :class="{ filter_active: show === 'wire wrapping' }" @click="setShow('wire wrapping')">
+        wire wrapping ({{items.filter((item) => item.category === 'wire wrapping').length}})
       </button>
     </div>
     <div class="cards">
       <TransitionGroup name="list">
-        <div v-for="item in filtered_items"
-             :key="item.title">
+        <div v-for="item in filtered_items" :key="item.title">
           <CardItem :item=item>
 
           </CardItem>
@@ -98,7 +79,57 @@ function compare_date(a, b) {
 }
 
 const items = [
+      {
+    title: 'Pug Plushie',
+    category: "sewing & embroidery",
+    image: {
+      thumbnail: require("./assets/thumbs/pug_plushie.webp"),
+      source: require("./assets/pug_plushie.png"),
+      aspect_ratio: "1 / 1",
+    },
+    date: new Date("2024-05-09T12:00:00-06:30"),
+  },    
     {
+    title: 'Cartoon Cake Slice',
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/thumbs/cartoon_cake.webp"),
+      source: require("./assets/cartoon_cake.jpeg"),
+      aspect_ratio: "3024 / 4032",
+    },
+    date: new Date("2023-11-26T12:00:00-06:30"),
+  },    
+{
+    title: 'Hank',
+    category: "colored pencil",
+    image: {
+      thumbnail: require("./assets/thumbs/hank_1.webp"),
+      source: require("./assets/hank_1.png"),
+      aspect_ratio: "2567 / 1712",
+    },
+    date: new Date("2023-03-11T12:00:00-06:30"),
+  },
+  {
+    title: 'Flying Saucer',
+    category: "sculpting",
+    image: {
+      thumbnail: require("./assets/thumbs/UFO.webp"),
+      source: require("./assets/UFO.png"),
+      aspect_ratio: "2048 / 2732",
+    },
+    date: new Date("2023-03-20T12:00:00-06:30"),
+  },
+  {
+    title: 'Macarons With German Chocolate Buttercream Filling',
+    category: "baking",
+    image: {
+      thumbnail: require("./assets/thumbs/macarons.webp"),
+      source: require("./assets/macarons.png"),
+      aspect_ratio: "3 / 2",
+    },
+    date: new Date("2023-03-20T12:00:00-06:30"),
+  },
+  {
     title: 'Ice Cream (Acrylic)',
     category: "painting",
     image: {
@@ -118,7 +149,7 @@ const items = [
     },
     date: new Date("2021-08-11T12:00:00-06:30"),
   },
-{
+  {
     title: 'Pâte Sablée "Cake" With Chantilly Mascarpone',
     category: "baking",
     image: {
@@ -128,7 +159,7 @@ const items = [
     },
     date: new Date("2023-08-29T12:00:00-06:30"),
   },
-{
+  {
     title: "3D Hand Lettering (Acrylic)",
     category: "painting",
     image: {
@@ -160,7 +191,7 @@ const items = [
   },
   {
     title: "Pug Iron-On Patch",
-    category: "embroidery",
+    category: "sewing & embroidery",
     image: {
       thumbnail: require("./assets/thumbs/pugpatch.webp"),
       source: require("./assets/pugpatch.jpg"),
@@ -341,7 +372,7 @@ const items = [
 
   {
     title: "courage the cowardly dog",
-    category: "embroidery",
+    category: "sewing & embroidery",
     image: {
       thumbnail: require("./assets/thumbs/courage.webp"),
       source: require("./assets/courage.jpg"),
@@ -351,7 +382,7 @@ const items = [
   },
   {
     title: "hogwarts crest",
-    category: "embroidery",
+    category: "sewing & embroidery",
     image: {
       thumbnail: require("./assets/thumbs/hogwarts_crest.webp"),
       source: require("./assets/hogwarts_crest.jpg"),
