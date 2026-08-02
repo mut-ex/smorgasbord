@@ -16,6 +16,19 @@ export const img = (name: string, aspect_ratio: string): ItemImage => ({
 
 export const items: Item[] = [
         {
+    title: "The Woodpecker Method Trainer",
+    category: "electronics & programming",
+    image: img("woodpecker", "3 / 2"),
+    date: "2026-01-08",
+    description: `This is a web app I developed for practicing chess puzzles using the Woodpecker Method — the idea of solving the same set of puzzles over and over until the patterns stick. You can try it out [here](https://woodpecker-glig.onrender.com). Here are some of its features:
+- A bank of 1,128 puzzles across three difficulty levels: easy, intermediate, and advanced. You choose the category in the settings, and you can also set the range of puzzles you want to practice within it.
+- Puzzles can be practiced sequentially or in random order.
+- The board can be flipped to see the position from your opponent's point of view.
+- If you're stumped, the Solution button will show you the answer.
+- Every puzzle comes with an explanation of the solution, shown once you complete it or resign, and you can step back and forward through the moves ply by ply.
+- All your attempts are logged with their date, outcome, and time.`
+  },
+        {
     title: "Hank's Tuxedo Scarf",
     category: "sewing & embroidery",
     image: img("tuxedo_scarf", "5 / 7"),

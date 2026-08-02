@@ -227,3 +227,12 @@ a {
   border-radius: 4px; 
 
 }
+
+ol, ul {
+  margin-left: 1rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
