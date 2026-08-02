@@ -15,6 +15,13 @@ export const img = (name: string, aspect_ratio: string): ItemImage => ({
 });
 
 export const items: Item[] = [
+        {
+    title: "Hank's Tuxedo Scarf",
+    category: "sewing & embroidery",
+    image: img("tuxedo_scarf", "5 / 7"),
+    date: "2024-05-17",
+    description: "He was quite the little gentleman. ❤️"
+  },
       {
     title: "Parametric Vase-Mode Organizer",
     category: "3d printing",
