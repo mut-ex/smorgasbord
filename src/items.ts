@@ -15,10 +15,23 @@ export const img = (name: string, aspect_ratio: string): ItemImage => ({
 });
 
 export const items: Item[] = [
+              {
+    title: "LSP, courage & spongebob pins",
+    category: "jewelry & pins",
+    image: img("lsp_courage_spongebob_pins", "1 / 1"),
+    date: "2022-08-17",
+    description: "These were primarily an experiment, and I love how they turned out! Each character started as a vector drawing in Affinity Designer, which I then brought into Fusion 360 and extruded into a pin base with recessed sections. After printing them on a resin printer, I painted the recesses with acrylics and topped everything with UV-curing resin for that glossy faux-enamel finish."
+  },
+            {
+    title: "duo the owl",
+    category: "sculpting",
+    image: img("duo_render", "5 / 4"),
+    date: "2026-03-28",
+  },
           {
     title: "cheeseburger",
     category: "sculpting",
-    image: img("cheeseburger", "1 / 1"),
+    image: img("cheeseburger", "5 / 4"),
     date: "2026-03-28",
   },
         {
@@ -42,7 +55,7 @@ export const items: Item[] = [
   {
     title: "white castle slider (acrylic)",
     category: "painting",
-    image: img("white_castle_slider", "1 / 1"),
+    image: img("white_castle_slider", "5 / 4"),
     date: "2021-09-21",
   },
   {
@@ -50,6 +63,7 @@ export const items: Item[] = [
     category: "baking",
     image: img("red_velvet", "5 / 4"),
     date: "2023-06-16",
+    description: "I went a bit old-school with this red velvet cake and skipped the cream cheese frosting in favor of ermine — the original frosting for this cake. It's made by cooking flour and milk into a paste before whipping it with butter and sugar. It's not the best choice for detailed decorating, but it has a nice silky texture and is considerably less sweet than American buttercream."
   },
   {
     title: "birthday bear",
@@ -116,6 +130,7 @@ export const items: Item[] = [
     category: "baking",
     image: img("macarons", "3 / 2"),
     date: "2023-03-20",
+    description: "I believe this was my fourth, maybe fifth attempt at making macarons. I am really proud of how these turned out! The best part: with so many yolks left over from the shells, I put them straight to use in a chocolate German buttercream filling"
   },
   {
     title: "Ice Cream (Acrylic)",
@@ -130,7 +145,7 @@ export const items: Item[] = [
     date: "2021-08-11",
   },
   {
-    title: 'Pâte Sablée "Cake" With Chantilly Mascarpone',
+    title: 'Pâte Sablée & Mascarpone Chantilly Tart',
     category: "baking",
     image: img("63", "5 / 4"),
     date: "2023-08-29",
@@ -220,7 +235,7 @@ export const items: Item[] = [
     date: "2021-09-21",
   },
   {
-    title: "Cake I",
+    title: "Pink Rosette Marble Cake",
     category: "baking",
     image: img("rosette_cake", "4 / 3"),
     date: "2023-06-07",
@@ -256,10 +271,11 @@ export const items: Item[] = [
     date: "2021-05-05",
   },
   {
-    title: "Cake II",
+    title: "vintage-style vanilla cherry cake",
     category: "baking",
     image: img("vintage_cherry", "4 / 5"),
     date: "2023-11-24",
+    description: "A birthday cake that was really fun to make! Vanilla cake layered with homemade cherry filling and finished with Swiss meringue buttercream."
   },
   {
     title: "courage the cowardly dog",

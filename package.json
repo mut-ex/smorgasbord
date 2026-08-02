@@ -10,20 +10,21 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "marked": "^18.0.7",
     "v-viewer": "^3.0.22",
     "viewerjs": "^1.11.7",
     "vue": "^3.5.0",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@types/node": "^24.13.3a",
     "@eslint/js": "^9.0.0",
+    "@types/node": "^24.13.3a",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/tsconfig": "^0.9.1",
-    "eslint-plugin-vue": "^10.0.0",
     "eslint": "^9.0.0",
-    "typescript-eslint": "^8.0.0",
+    "eslint-plugin-vue": "^10.0.0",
     "typescript": "~6.0.2",
+    "typescript-eslint": "^8.0.0",
     "vite": "^8.2.0",
     "vue-tsc": "^3.3.8"
   },

@@ -27,6 +27,7 @@ declare global {
     category: Category,
     image: ItemImage,
     date: string,
+    description?: string,
   }
 
 }

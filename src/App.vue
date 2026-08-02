@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { items } from "./items.ts";
-import CardItem from "./components/CardItem.vue";
+import ItemCard from "./components/ItemCard.vue";
 
 const categories: Category[] = ["3d printing", "baking", "calligraphy & lettering", "electronics & programming", "digital art", "drawing", "jewelry & pins", "painting", "paracord", "printmaking", "sculpting", "sewing & embroidery"]
 
@@ -46,8 +46,7 @@ const itemsFiltered = computed(() => shuffle(items
     <div class="cards">
       <TransitionGroup name="list">
         <div v-for="item in itemsFiltered" :key="item.title">
-          <CardItem :item=item>
-          </CardItem>
+          <ItemCard :item=item />
         </div>
       </TransitionGroup>
     </div>
