@@ -3,7 +3,7 @@ import { ref, computed } from "vue";
 import { items } from "./items.ts";
 import CardItem from "./components/CardItem.vue";
 
-const categories: Category[] = ["baking", "drawing", "painting", "calligraphy & lettering", "digital art", "sculpting", "3d prints", "electronics", "sewing & embroidery", "jewelry & pins", "paracord", "printmaking"];
+const categories: Category[] = ["3d printing", "baking", "calligraphy & lettering", "electronics & programming", "digital art", "drawing", "jewelry & pins", "painting", "paracord", "printmaking", "sculpting", "sewing & embroidery"]
 
 const categoryRef = ref<Category>("all");
 

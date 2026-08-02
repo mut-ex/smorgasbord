@@ -2,18 +2,19 @@ declare global {
   type Category =
     | "none"
     | "all"
+    | "3d printing"
     | "baking"
-    | "drawing"
-    | "painting"
     | "calligraphy & lettering"
+    | "coding"
     | "digital art"
-    | "sculpting"
-    | "3d prints"
-    | "electronics"
-    | "sewing & embroidery"
+    | "drawing"
+    | "electronics & programming"
     | "jewelry & pins"
+    | "painting"
     | "paracord"
-    | "printmaking";
+    | "printmaking"
+    | "sculpting"
+    | "sewing & embroidery";
 
   interface ItemImage {
     thumbnail: string;
@@ -25,7 +26,7 @@ declare global {
     title: string,
     category: Category,
     image: ItemImage,
-    date: Date,
+    date: string,
   }
 
 }

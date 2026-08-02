@@ -22,7 +22,8 @@ defineProps<{
   item: Item
 }>()
 
-function formatDate(date: Date) {
+function formatDate(date: string) {
+  const date_= new Date(`${date}T12:00:00-06:30`)
   const months = [
     "JAN",
     "FEB",
@@ -38,11 +39,11 @@ function formatDate(date: Date) {
     "DEC",
   ];
   return (
-    months[date.getMonth()] +
+    months[date_.getMonth()] +
     " " +
-    date.getDate() +
+    date_.getDate() +
     ", " +
-    (date.getFullYear())
+    (date_.getFullYear())
   );
 }
 </script>
