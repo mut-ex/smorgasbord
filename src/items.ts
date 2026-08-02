@@ -15,19 +15,49 @@ export const img = (name: string, aspect_ratio: string): ItemImage => ({
 });
 
 export const items: Item[] = [
+          {
+    title: "cheeseburger",
+    category: "sculpting",
+    image: img("cheeseburger", "1 / 1"),
+    date: "2026-03-28",
+  },
         {
+    title: "foghorn leghorn",
+    category: "sewing & embroidery",
+    image: img("foghorn_leghorn", "1 / 1"),
+    date: "2025-06-29",
+  },
+      {
+    title: "fox (watercolor)",
+    category: "painting",
+    image: img("fox", "5 / 4"),
+    date: "2023-03-25",
+  },
+    {
+    title: "chocolate babka",
+    category: "baking",
+    image: img("babka", "5 / 4"),
+    date: "2023-03-25",
+  },
+  {
+    title: "white castle slider (acrylic)",
+    category: "painting",
+    image: img("white_castle_slider", "1 / 1"),
+    date: "2021-09-21",
+  },
+  {
     title: "red velvet cake",
     category: "baking",
     image: img("red_velvet", "5 / 4"),
     date: "2023-06-16",
   },
-      {
+  {
     title: "birthday bear",
     category: "printmaking",
     image: img("bear_stamp", "5 / 7"),
     date: "2021-08-25",
   },
-    {
+  {
     title: "green beetle (watercolor)",
     category: "painting",
     image: img("green_beetle", "5 / 4"),
