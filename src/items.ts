@@ -15,6 +15,12 @@ export const img = (name: string, aspect_ratio: string): ItemImage => ({
 });
 
 export const items: Item[] = [
+          {
+    title: "Cheese Pizza",
+    category: "sculpting",
+    image: img("cheese_pizza", "4 / 3"),
+    date: "2026-08-06",
+  },
         {
     title: "The Woodpecker Method Trainer",
     category: "electronics & programming",
